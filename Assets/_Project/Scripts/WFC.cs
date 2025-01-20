@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using NaughtyAttributes;
 using Unity.Mathematics;
 using UnityEngine;
 public class WFC : MonoBehaviour
@@ -15,12 +16,15 @@ public class WFC : MonoBehaviour
 
     void Awake()
     {
-        gridComponents = new List<Cell>();
+        //gridComponents = new List<Cell>();
         InitializeGrid();
     }
 
+    [Button("Start")]
     void InitializeGrid()
     {
+        gridComponents = new List<Cell>(); 
+        // tedt
         for (int y = 0; y < dimensions; y++)
         {
             for (int x = 0; x < dimensions; x++)
@@ -86,7 +90,7 @@ public class WFC : MonoBehaviour
     TileWeightBundle SelectTileBasedOnWeight(TileWeightBundle[] options)
     {
         int totalWeight = 0;
-
+        Debug.LogWarning($"{options.Length} tile options selected");
         // Berechne das Gesamtgewicht
         foreach (var option in options)
         {
@@ -123,7 +127,6 @@ public class WFC : MonoBehaviour
                 var index = x + y * dimensions;
                 if (gridComponents[index].collapsed)
                 {
-                    Debug.Log("called");
                     newGenerationCell[index] = gridComponents[index];
                 }
                 else
@@ -160,7 +163,7 @@ public class WFC : MonoBehaviour
                         foreach (TileWeightBundle possibleOptions in right.tileOptions)
                         {
                             var valOption = Array.FindIndex(tileObjects, obj => obj.Equals(possibleOptions));
-                            var valid = tileObjects[valOption].Tile.leftNeighbours;
+                            var valid = tileObjects[valOption].Tile.rightNeighbours;
 
                             validOptions = validOptions.Concat(valid).ToList();
                         }
@@ -226,13 +229,38 @@ public class WFC : MonoBehaviour
 
     void CheckValidity(List<TileWeightBundle> optionList, List<TileWeightBundle> validOption)
     {
-        for (int x = optionList.Count - 1; x >= 0; x--)
-        {
-            var element = optionList[x];
-            if (!validOption.Contains(element))
-            {
-                optionList.RemoveAt(x);
-            }
-        }
+        var validTiles = validOption.Select(bundle => bundle.Tile).ToHashSet(); // Use HashSet for faster lookups
+        optionList.RemoveAll(bundle => !validTiles.Contains(bundle.Tile));
+        
+        // var tempOptionsList = new List<Tile>();
+        // var tempValidOptions = new List<Tile>();
+        //
+        // foreach (var option in optionList)
+        // {
+        //     tempOptionsList.Add(option.Tile); 
+        // }
+        //
+        // foreach (var option in validOption)
+        // {
+        //     tempValidOptions.Add(option.Tile); 
+        // }
+        //
+        // for (int x = optionList.Count - 1; x >= 0; x--)
+        // {
+        //     var element = tempOptionsList[x];
+        //     if (!tempValidOptions.Contains(element))
+        //     {
+        //         tempOptionsList.RemoveAt(x);
+        //     }
+        // }
+        //
+        // int index = 0;
+        // foreach (var bundle in optionList.ToList())
+        // {
+        //     if (bundle.Tile != tempOptionsList[index])
+        //     {
+        //         optionList.Remove(bundle);
+        //     }
+        // }
     }
 }

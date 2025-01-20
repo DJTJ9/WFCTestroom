@@ -240,8 +240,7 @@ namespace ThinkShark.Setup
         static class Assets
         {
             public static void ImportAsset(string asset, string subfolder,
-                string                            rootFolder = "C:/Unity/Assets") {
-                // <---- Set the folder with your assets here (without subfolders)!!!
+                string rootFolder = "C:/Unity/Assets") { // <---- Set the folder with your assets here (without subfolders)!!!
                 ImportPackage(Combine(rootFolder, subfolder, asset), false);
             }
         }
