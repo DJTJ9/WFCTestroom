@@ -123,11 +123,11 @@ MonoBehaviour:
   - Tile: {fileID: 7131069118939372657, guid: 77f900097aadd384c82288523cbcace3, type: 3}
     Weight: 9
   - Tile: {fileID: 7131069118939372657, guid: 2ff6c07d7b0679c4a8465e51a4aa1d63, type: 3}
-    Weight: 1
+    Weight: 5
   - Tile: {fileID: 7131069118939372657, guid: 63eb8c9146ce80942b3f2c804919c383, type: 3}
     Weight: 1
   - Tile: {fileID: 7131069118939372657, guid: 98244e1d91a67674f9b6abf9dc24a7b1, type: 3}
-    Weight: 1
+    Weight: 5
   rightNeighbours:
   - Tile: {fileID: 7131069118939372657, guid: be786b8d371442f47ac4207ae13f6933, type: 3}
     Weight: 9

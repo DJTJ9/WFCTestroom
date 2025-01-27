@@ -119,14 +119,14 @@ MonoBehaviour:
   - Tile: {fileID: 7131069118939372657, guid: 82ab1e5bff304df48a435bb338770ecf, type: 3}
     Weight: 1
   - Tile: {fileID: 7131069118939372657}
-    Weight: 3
+    Weight: 9
   - Tile: {fileID: 7131069118939372657, guid: 6acc0c841feff0a4b8f25eea6e625d77, type: 3}
-    Weight: 1
+    Weight: 9
   - Tile: {fileID: 7131069118939372657, guid: 30ddb4b6b868b914387becbab5a68af5, type: 3}
     Weight: 9
   rightNeighbours:
   - Tile: {fileID: 7131069118939372657}
-    Weight: 3
+    Weight: 9
   - Tile: {fileID: 7131069118939372657, guid: 2ff6c07d7b0679c4a8465e51a4aa1d63, type: 3}
     Weight: 1
   - Tile: {fileID: 7131069118939372657, guid: da502de273bab284cb3114b5ab0864c4, type: 3}

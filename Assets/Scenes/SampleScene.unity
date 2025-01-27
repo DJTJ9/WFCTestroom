@@ -420,19 +420,19 @@ MonoBehaviour:
   - Tile: {fileID: 7131069118939372657, guid: 82ab1e5bff304df48a435bb338770ecf, type: 3}
     Weight: 1
   - Tile: {fileID: 7131069118939372657, guid: f9952fa21199eff479fc982820cb54dd, type: 3}
-    Weight: 9
+    Weight: 3
   - Tile: {fileID: 7131069118939372657, guid: 2ff6c07d7b0679c4a8465e51a4aa1d63, type: 3}
     Weight: 1
   - Tile: {fileID: 7131069118939372657, guid: e54da7532f6681548af37769779b5bae, type: 3}
-    Weight: 9
+    Weight: 3
   - Tile: {fileID: 7131069118939372657, guid: be786b8d371442f47ac4207ae13f6933, type: 3}
     Weight: 5
   - Tile: {fileID: 7131069118939372657, guid: 63eb8c9146ce80942b3f2c804919c383, type: 3}
-    Weight: 9
+    Weight: 3
   - Tile: {fileID: 7131069118939372657, guid: c2e8b7fbc2c177e4fb987c42d3756e19, type: 3}
     Weight: 1
   - Tile: {fileID: 7131069118939372657, guid: a4f70bcc878da0a4fa5ca01978be83ff, type: 3}
-    Weight: 9
+    Weight: 3
   - Tile: {fileID: 7131069118939372657, guid: 98244e1d91a67674f9b6abf9dc24a7b1, type: 3}
     Weight: 1
   - Tile: {fileID: 7131069118939372657, guid: da502de273bab284cb3114b5ab0864c4, type: 3}
